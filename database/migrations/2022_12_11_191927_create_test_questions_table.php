@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('test_questions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('test_id')->constrained()->cascadeOnDelete();
-            $table->text('question');
+            $table->text('text');
             $table->string('dimension');
             $table->integer('direction');
             $table->string('meaning');
