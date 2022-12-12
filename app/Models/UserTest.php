@@ -11,5 +11,6 @@ class UserTest extends Pivot
 
     public $casts = [
         'results' => 'json',
+        'answers' => 'json',
     ];
 }

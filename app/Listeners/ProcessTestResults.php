@@ -49,8 +49,16 @@ class ProcessTestResults
             $results[$dimension] = $score['count'] > 0 ? round($score['value'] / $score['count'], 1) : 0;
         }
 
+        $answers = $answers->map(function (array $values) {
+            return [
+                'test_question_id' => $values['id'],
+                'value' => $values['value'],
+            ];
+        });
+
         $event->getUser()->tests()->attach($event->getTest(), [
             'results' => $results,
+            'answers' => $answers,
         ]);
     }
 }
