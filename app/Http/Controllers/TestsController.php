@@ -9,12 +9,10 @@ use App\Models\UserTest;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Inertia\Response as InertiaResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class TestsController extends Controller
 {
@@ -39,6 +37,7 @@ class TestsController extends Controller
             'email' => [
                 'required',
                 Rule::unique('users', 'email'),
+                // TODO need to change this Unique rule to one that only checks to see if a test was submitted for this user
             ],
             'answers' => "required|array|size:{$totalQuestions}",
             'answers.*.id' => [
