@@ -8,7 +8,7 @@ This project uses [Laradock](https://laradock.io/) for creating the Docker envir
     ```
 1. Navigate to the project's root directory in a terminal and run the following:
     ```
-    ./scripts/install
+    ./scripts/install.sh
     ```
     This script will perform the following:
     - Build the required docker containers for the application.
