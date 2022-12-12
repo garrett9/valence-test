@@ -9,6 +9,7 @@ cp nginx.conf laradock/nginx/sites/default.conf
 
 cd laradock
 docker-compose up -d --build nginx mysql redis
+$DOCKER_COMMAND php /var/www/artisan composer install
 $DOCKER_COMMAND php /var/www/artisan key:generate
 $DOCKER_COMMAND php /var/www/artisan migrate
 $DOCKER_COMMAND npm install
