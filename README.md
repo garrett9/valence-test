@@ -33,6 +33,7 @@ Since I unfortunately ran out of time, there are a few things that would need to
 1. The front-end interfaces are more like prototypes and production ready components. I'd like to spend more time cleaning them up by making more re-usable components and such.
 1. I knew early that I wouldn't have time for this, but an improvement to the `ProcessTestResults.php` event listener should be executed in the background, and a loading indicator should be shown on the results page for a better experience.
 1. I did not have enough time to implement the ideal solution for storing answers to the test questions. Right now, they are stored as a JSON column for each test submission. This will make it hard in the future since indexing on the column values won't be possible. Ideally, I would store each answer as its own record in a new table attached to the question that was being asked.
+1. The final "Perspective Result" on the left hand side of the results page is not sorted. That should be a simple fix if there was more time.
 
 Other than that, I mostly feel good about the implementation given the time I had and my understanding of the MBTI result. It took some effort to fully understand the calculations that were being asked for. I'm imagining that my current direction might be a little off from what was requested since I made some executive decisions along the way :).
 
